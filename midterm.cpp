@@ -34,10 +34,12 @@ int main() {
     string answer;
 
     while (true) {
+        //asks you to type one of the three options
         cout<<"Do you want to DECRYPT or ENCRYPT? Type EXIT to stop."<<endl;
         cin>> answer;
         cin.ignore();
         int m;
+        //turns the answer to lower to go to the designated if statement
         for (m=0; m<answer.size();m++){
             answer.at(m)= tolower(answer.at(m));
         }
@@ -46,7 +48,7 @@ int main() {
             cout<<"Paste the encrypted text here:"<<endl;
             getline(cin, Encrypted);
     
-            //Lines 42-53 is with the help of ChatGPT
+            //Lines 55-66 is with the help of ChatGPT
             
             // this finds each unique letter in the text and 
             // adds to the fequency count of that letter 
@@ -95,7 +97,7 @@ int main() {
     
                 // The code checks for a key word "ANTARCTICA"
                 // if it is present, the program exists loop and displays the result
-                //line 88 is with the help of ChatGPT
+                //line 101 is with the help of ChatGPT
                 if (decryptedStr.find("ANTARCTICA") != string::npos) {
                     cout<<endl<<"-------------------------------------"<<endl;
                     cout << "The correct key is: " << Keys[i] << endl;
